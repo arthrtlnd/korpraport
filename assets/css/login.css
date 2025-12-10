@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  background-image: url(../img/footer-bg.png); /* REVISI: Path gambar diperbaiki */
+  background-repeat: no-repeat;
+  background-size: 200px;
+  background-position: right bottom;
+}
+
+.header{
+  background: linear-gradient(to right, #E33333, #7D1C1C);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header img{
+  width: 70px;
+  height: 70px;
+}
+
+.header-title{
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #FFB700, #F87400);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.container{
+  display: flex;
+  height: calc(100vh - 85px);
+  position: relative;
+}
+
+.left-section{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.divider {
+  width: 3px;
+  height: 200px;
+  background-color: #333;
+}
+
+.brand-text {
+  color: #7f0000;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+.login-card {
+  background: transparent;
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+.login-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px; 
+  transition: border-color 0.3s;
+  background-color: #f8f8f8;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #c62828;
+  background-color: white;
+}
+
+
+.login-button {
+  width: 100%;
+  padding: 15px 20px; 
+  background-color: #7d1f1f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px; 
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+ul{
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #005B8F;
+}
+
+.login-button:hover {
+  background-color: #5d1717;
+}
+
+.reset{
+    background: transparent;
+    border-radius: 20px;
+    position: absolute;
+    padding: 30px;
+    top: 110px;
+    left: 60vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    justify-content: center;
+}
+
+
+/* REVISI: 
+Blok CSS duplikat di bawah ini telah dihapus 
+untuk memperbaiki ukuran input password yang tidak konsisten.
+
+h1 { ... }
+.form-group { ... }
+label { ... }
+input[type="password"] { ... }
+input[type="password"]:focus { ... }
+button { ... }
+button:hover { ... }
+.message { ... }
+.message.success { ... }
+.message.error { ... }
+*/
+
+
+/* ==============================
+   RESPONSIVE LAYOUT FOR MOBILE
+   ============================== */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .left-section {
+    order: 2; /* tampil di bawah form login */
+  }
+
+  .right-section {
+    order: 1;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .brand-text {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .main-logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .login-card {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 95%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  }
+
+  .login-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .login-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .form-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  ul li a {
+    font-size: 14px;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: 150px;
+  }
+
+  .brand-text {
+    font-size: 32px;
+  }
+
+  .login-card {
+    padding: 25px 15px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .login-subtitle {
+    font-size: 16px;
+  }
+
+  .login-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  ul {
+    margin-top: 10px;
+  }
+}
+

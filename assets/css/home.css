@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #d10000 0%, #8b0000 50%, #000000 100%);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+.dashboard{
+    text-align: center;
+}
+
+.dashboard img{
+    width: 150px;
+    height: 150px;
+}
+
+.dashboard h1{
+    font-size: 2.5rem;
+    margin: 20px 0;
+    background: linear-gradient(to right, #FFB700, #F87400);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #d4af37 0%, #c9a933 100%);
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+    background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+}
+/* --- MOBILE FRIENDLY STYLES --- */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .navbar .menu-items {
+        display: none; /* Hide menu for mobile, to be handled by JavaScript */
+    }
+
+    .navbar .hamburger-menu {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .feature-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
